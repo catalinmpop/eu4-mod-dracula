@@ -1,0 +1,41 @@
+take_vampire_bride = {
+	category = dynasty
+	
+	alert_index = 40
+	alert_tooltip = demand_dummy_alert_tooltip
+	
+	require_acceptance = no # Whether the recipient gets an option to decline
+	
+	is_visible = {
+		always = yes
+		is_subject = no
+		FROM = {
+			is_subject = no
+		}
+	}
+	is_allowed = {
+			FROM = {
+			has_opinion = { 
+				who = ROOT
+				value = 100
+				}
+			is_female = yes
+			}	
+			ROOT = {
+				dominant_religion = fourhorsemen
+				}
+	}
+		
+	on_accept = {  
+		add_trust = {
+			who = FROM
+			value = 200
+			mutual = yes
+		}
+		create_union = FROM
+		FROM = {
+			change_religion = fourhorsemen
+			}
+		}
+	}
+	

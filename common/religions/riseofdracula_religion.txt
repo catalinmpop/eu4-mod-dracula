@@ -1,0 +1,126 @@
+# If you add religions, and use those tags, do not change them without changing everywhere they are used.
+
+# Uses all 'modifiers' possible thats exported as a Modifier.
+
+# If you add religions, and use those tags, do not change them without changing everywhere they are used.
+
+# Uses all 'modifiers' possible thats exported as a Modifier.
+
+christian = {
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	
+	center_of_religion = 1428 # Kiralyfold
+
+	# Flag emblem values - Used for Dynamic Setup of Random Nations.
+	# Emblem texture: game/gfx/interface/client_state_symbols_large.dds
+	# Can be overridden per religion.
+	flags_with_emblem_percentage = 33 # default == 0
+	flag_emblem_index_range = { 1 57 }
+
+
+	fourhorsemen = {
+		color = { 150 0 0 }
+		icon = 29
+		country = {
+			tolerance_heretic = -2
+			tolerance_heathen =	-2
+			
+		}
+		country_as_secondary = {
+			global_colonial_growth = 10
+			tolerance_own = 1
+		}
+		province = {
+			 	institution_spread_from_true_faith = 0.2
+		}
+		
+		
+		heretic = { OLD_BELIEVER MOLOKAN DUKHOBOR KHLYST SKOPTSY ICONOCLAST }
+		
+		has_patriarchs = yes		# Uses patriarch authority
+		misguided_heretic = yes		# Other christians hate them less
+		
+		orthodox_icons = {
+			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
+
+			riderofdeath = {
+				raze_power_gain = 2
+				war_exhaustion = -1
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						is_at_war = no
+					}
+					modifier = {
+						factor = 3
+						is_in_important_war = yes
+					}
+				}
+			}
+
+			rideroffamine = {
+				siege_ability = 0.2
+				state_maintenance_modifier = -0.6
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						NOT = {
+							calc_true_if = {
+								all_owned_province = {
+									unrest = 1
+								}
+								amount = 2
+							}
+						}
+					}
+					modifier = {
+						factor = 3
+						calc_true_if = {
+							all_owned_province = {
+								unrest = 1
+							}
+							amount = 5
+						}
+					}
+				}
+			}
+
+			riderofwar = {
+				shock_damage = 0.2
+				fire_damage = 0.2
+				
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 0
+				}
+			}
+	
+			riderofpestilence = {
+				hostile_attrition  = 0.4
+				movement_speed = 0.25
+				allow = {
+					always = yes
+				}
+				ai_will_do = {
+					factor = 0.5
+				}
+			}
+		}
+	}
+	
+	harmonized_modifier = harmonized_christian
+	
+	crusade_name = CRUSADE
+}

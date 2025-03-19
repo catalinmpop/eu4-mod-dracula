@@ -1,0 +1,80 @@
+drc_free_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = DRC
+		NOT = {
+			has_country_flag = drc_theodora_alliance_free_mission_flag
+		}
+	}
+	has_country_shield = yes
+	
+	drc_theodora_alliance_free = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			if = {
+				limit = {
+					exists = FEO
+					NOT = { is_rival = FEO }
+				}
+				OR = {
+					alliance_with = FEO
+					FEO = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			wallachia_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			moldavia_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			yedisan_area = {
+				limit = {
+					NOT = { owned_by = FEO	}
+					NOT = { is_core = FEO	}
+				}
+				add_core = FEO
+			}
+			zaporizhia_area = {
+				limit = {
+					NOT = { owned_by = FEO	}
+					NOT = { is_core = FEO	}
+				}
+				add_core = FEO
+			}
+			crimea_area = {
+				limit = {
+					NOT = { owned_by = FEO	}
+					NOT = { is_core = FEO	}
+				}
+				add_core = FEO
+			}
+			azov_area = {
+				limit = {
+					NOT = { owned_by = FEO	}
+					NOT = { is_core = FEO	}
+				}
+				add_core = FEO
+			}
+			add_trust = {
+				who = FEO
+				value = 100
+				mutual = yes
+}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+government = feudal_monarchy
+technology_group = western
+primary_culture = transylvanian
+add_accepted_culture = hungarian
+add_accepted_culture = romanian
+religion = fourhorsemen
+add_patriarch_authority = 1
+historical_friend = FEO
+fixed_capital = 4128 #Kiralyfold, capital cannot be moved from the castle
+
+1429.2.5 = {
+	monarch = {
+		name = "Vladimir Draculea"
+		dynasty = "Tepes"
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = infertile_personality
+	add_ruler_personality = malevolent_personality
+}

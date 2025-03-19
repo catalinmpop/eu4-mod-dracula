@@ -1,0 +1,5 @@
+﻿l_english:
+ DIPLOMACYACTION_CATEGORY_vampire_actions_title:0 "Vampire Actions"
+ take_vampire_bride_title:0 "Take Vampire Bride"
+ take_vampire_bride_desc:0 "A quick bite to the neck of [From.Monarch.GetName] of [From.GetName] will ensure her countries eternal devotion to us!"
+ take_vampire_bride_tooltip:0 "Turn their Queen into a Vampire and gain a Personal Union over their entire country."

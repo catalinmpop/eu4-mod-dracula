@@ -1,0 +1,51 @@
+DRC_ideas = {
+	start = {
+		culture_conversion_cost = -0.8
+		free_leader_pool = 3
+	}
+
+	bonus = {
+		max_states = 16
+	}
+	
+	trigger = {
+		tag = DRC
+	}
+	free = yes		#will be added at load.
+	
+	army_of_the_damned = {
+		infantry_cost = -0.5
+		infantry_power = 0.2
+		cavalry_cost = -0.5
+		cavalry_power = 0.2
+		artillery_cost = -0.5
+		artillery_power = 0.2
+	}
+	expand_the_realm = {
+		province_warscore_cost = -0.5
+	}
+	master_alchemist = {
+		technology_cost = -0.15
+		idea_cost = -0.2
+	}
+	gothic_revival = {
+		build_cost = -0.2
+		fort_maintenance_modifier = -0.5
+	}
+	harbingers_of_the_apocalypse = {
+	 	missionaries = 4
+		tolerance_own = 3	
+		global_missionary_strength = 0.2
+	}
+	spoils_of_war = {
+		loot_amount = 5
+	}
+	the_end_times = {
+		discipline = 0.25
+		land_morale = 0.2
+	}
+}
+
+
+
+

@@ -1,0 +1,11 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "draculas_castle"
+		file = "gfx\models\Mapitems\draculascastle.mesh"			
+		scale = 1
+
+	}
+	
+}
+

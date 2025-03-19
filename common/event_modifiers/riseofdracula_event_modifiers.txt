@@ -1,0 +1,5 @@
+vampire_sow_discord = {
+	global_unrest = 150
+	stability_cost_modifier = 10
+}
+	

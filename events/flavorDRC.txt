@@ -1,0 +1,65 @@
+country_event = {
+	id = destabilize_neighbours.1
+	title = "flavor_drc.destabilize_neighbours"
+	desc = "flavor_drc.destabilize_neighbours_desc"
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DRC
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "flavor_drc.destablize_neighbours_north" #Destabilize Austria and Hungary
+		HAB = {
+			add_stability = -6
+			add_country_modifier = { 
+				name = "vampire_sow_discord"
+				duration = 7300  
+				}
+		}
+		HUN = {
+			add_stability = -6
+			add_country_modifier = { 
+				name = "vampire_sow_discord"
+				duration = 7300  
+				}
+		}
+	}
+	option = {
+		name = "flavor_drc.destablize_neighbours_east" #Destabilize Poland and Lithuania
+		POL = {
+			add_stability = -6
+			add_country_modifier = { 
+				name = "vampire_sow_discord"
+				duration = 3650  
+				}
+		}
+		LIT = {
+			add_stability = -6
+			add_country_modifier = { 
+				name = "vampire_sow_discord"
+				duration = 3650  
+				}
+		}
+	}
+	option = {
+		name = "flavor_drc.destablize_neighbours_south" #Destabilize the Ottomans
+		TUR = {
+			add_stability = -6
+			add_country_modifier = { 
+				name = "vampire_sow_discord"
+				duration = 3650  
+				}
+		}
+	}
+
+}
+
+
+
